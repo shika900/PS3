@@ -1,0 +1,13 @@
+body
+{
+    color: rgb(51, 51, 145);
+    background-color:rgb(42, 125, 202);
+	background-image: url('bg.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;*/
+}
+
+p {
+    border:double 3px rgb(168, 173, 86);
+}
+Footer
