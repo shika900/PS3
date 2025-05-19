@@ -22,13 +22,10 @@
 <script>
 history.replaceState(null,null,
 'index.html');var histlength=history.length;history.go(-histlength);
-		<h1 id="myProgress">
-		  <div id="myBar">0%</div>
-		</h1>
-<div style="background-color:#032140;color:white;position:fixed;left:0;bottom:-0px;width:100%;text-align:center;">
-
-<a style='font-size:20px;text-align:center;color:#FFD700;'>{window.msgs.innerHTML="جاري بدء تثبيت التخزين المؤقت، يرجى الانتظار " + Percent + "%";},500)}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="تم تثبيت التخزين المؤقت بنجاح ✔";},1500);setTimeout(function(){window.msgs.innerHTML="الآن أغلق المتصفح وافتحه مرة أخرى للاستخدام بدون إنترنت";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-<h1 id="msgs">جاري بدء التخزين المؤقت...</h1>
+<h1 id="myProgress">
+<div id="myBar">0%</div>
+</h1>
+<div style="background-color:#032140;color:blue;position:fixed;left:0;bottom:-0px;width:100%;text-align:center;">
+function(){window.msgs.innerHTML="الآن أغلق المتصفح وافتحه مرة أخرى للاستخدام بدون إنترنت";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </body>
 </html>
