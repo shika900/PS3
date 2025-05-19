@@ -68,7 +68,7 @@
             function showSuccess() {
                 document.getElementById('progress').style.display = 'none';
                 document.getElementById('menu').style.display = 'block';
-                document.getElementById('status_msg').innerHTML = "تم تفعيل GoldHEN بنجاح!<br>لا حاجة لإعادة التفعيل.";
+                document.getElementById('status_msg').innerHTML = " GoldHEN LOADED!<br>.";
             }
             
             // وظيفة تُستدعى عند نجاح تفعيل الكولدهين
@@ -92,7 +92,7 @@
                     const text = e.target.textContent.toLowerCase();
                     if (text.includes('jailbreak has been successful') || 
                         text.includes('goldhen') || 
-                        text.includes('تم تفعيل')) {
+                        text.includes('DONE')) {
                         goldhenSuccess();
                     }
                 }
