@@ -22,10 +22,10 @@
 <script>
 history.replaceState(null,null,
 'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs.innerHTML="جاري بدء تثبيت التخزين المؤقت، يرجى الانتظار " + Percent + "%";},500)}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="تم تثبيت التخزين المؤقت بنجاح ✔";},1500);setTimeout(function(){window.msgs.innerHTML="أغلق المتصفح وأقفل الانترنت وافتح المتصفح مره أخري";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs.innerHTML="Offline Cache" + Percent + "%";},500)}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Offline Cache Done  ✔";},1500);setTimeout(function(){window.msgs.innerHTML=" Close The Broswer And Internet Then Reopen Broswer Again ";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 </div>
-<h1 id="msgs">جاري بدء التخزين المؤقت...</h1>
+<h1 id="msgs">Starting Offline Cache ...</h1>
 </body>
 </html>
