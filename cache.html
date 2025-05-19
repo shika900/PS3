@@ -22,14 +22,12 @@
 <script>
 history.replaceState(null,null,
 'index.html');var histlength=history.length;history.go(-histlength);
-#CacheProgress {
-position:fixed;left:0;right:0;top:50;bottom:10px;max-width:100%;max-height:100%;margin:auto;
-width:1076px;height:30px;
-color: rgb(255, 255, 255);
-border-radius: 100px;
-border: solid 1px rgb(0, 150, 255);
-box-shadow: 0px 0px 5px rgb(0, 150, 255);
-overflow: hidden;
-}
+function DisplayCacheProgress(){
+setTimeout(function(){parent.cacheUPDtxt.innerHTML="Cache Installed Successfully.Reopen the Page !!"; }, 1500);localStorage.cached900="yes";};
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onnoupdate=function(){localStorage.cached900="yes";};
+window.applicationCache.onerror=function(){localStorage.cached900="yes";};
 </script>
 </html>
