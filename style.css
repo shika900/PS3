@@ -22,7 +22,7 @@ a {
     text-decoration: none;
 }
 
-#myProgress {
+#myProgress {transition:opacity 1000ms;
 position:fixed;left:0;right:0;top:50;bottom:10px;max-width:100%;max-height:100%;margin:auto;
 width:1076px;height:30px;
 color: rgb(255, 255, 255);
@@ -31,17 +31,13 @@ border: solid 1px rgb(0, 150, 255);
 box-shadow: 0px 0px 5px rgb(0, 150, 255);
 overflow: hidden;
 }
-#myProgressudp {	
-    border: 5px solid #080261;
-    border-radius: 5px;
-    background-color: #05013d;
-    height: 45px;
-    position:fixed;left:0;right:0;top:50;bottom:10px;max-width:100%;max-height:100%;margin:auto;
-    top: -130;
-    bottom: 0;
-    left: 150;
-    right: 150;
-    margin: auto;
+#myProgressudp {transition:opacity 1000ms;
+border: 5px solid #080261;
+background-color: #05013d;
+position:fixed;left:0%;right:0;top:280px;bottom:0px;max-width:100%;max-height:100%;margin:auto;	
+width:1100px;height:400px;
+line-height:30px;align-items:left;
+font-family:sans-serif;font-size:32px;text-shadow: 4px 4px 4px black;text-align:center;color:white;z-index:901;
 }
 #myBar {
 position:fixed;left:0;right:0;top:50;bottom:10px;max-width:100%;max-height:100%;margin:auto;
