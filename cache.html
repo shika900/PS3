@@ -46,7 +46,9 @@
     right: 150;
     margin: auto;
 }
-#myBar {
+#myBar::before {
+  content: "0%";
+}
   width: 0%;
   height: 30px;
   background-color: #080261;
@@ -91,7 +93,6 @@ a {
 		</script>	
 		<h1 id="progress" class="titlehead">!! Loading.. Please Wait</h1><hr><br>
 		<h1 id="myProgress">
-		<div id="myBar">0%</div>
 		</h1>
 <div style="background-color:#032140;color:white;position:fixed;left:0;bottom:-0px;width:100%;text-align:center;">
 </body>
