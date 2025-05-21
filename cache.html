@@ -38,8 +38,8 @@ overflow: hidden;
     margin: auto;
 }
 #myBar {
-    width: 0%;
-    height: 40px;
+    width:0%
+    height:100%
     background-color: #080261;
         /*#201e45*/
     ;
@@ -60,8 +60,8 @@ a {
 		window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
 		window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
                 window.applicationCache.onupdateready=function(){document.getElementById("progress").innerHTML="Update Cache Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
-        	window.applicationCache.onnoupdate=function(){window.location.replace("lndex.html");};
-        	window.applicationCache.onerror=function(){window.location.replace("lndex.html");};
+        	window.applicationCache.onnoupdate=function(){window.location.replace("index.html");};
+        	window.applicationCache.onerror=function(){window.location.replace("index.html");};
         </script>
 			<script>
 			var width = 0;
@@ -80,8 +80,8 @@ a {
 		</script>	
 		<h1 id="progress" class="titlehead">!! Loading.. Please Wait</h1><hr><br>
 		<h1 id="myProgress">
-		  <div id="myBar">0%</div>
+		<div id="myBar">0%</div>
 		</h1>
-<div style="background-color:#032140;color:white;position:fixed;left:0;bottom:-0px;width:100%;text-align:center;">
+<div style="background-color:#05013d;color:#080261;position:fixed;left:0;right:0;top:50;bottom:10px;max-width:100%;max-height:100%;margin:auto;
 </body>
 </html>
