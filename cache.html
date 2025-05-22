@@ -91,7 +91,7 @@
   <script>
     // NOTE: applicationCache تم إلغاءه من معظم المتصفحات
     // ممكن تستخدم Service Worker بداله
-    /*
+    /
     if (window.applicationCache) {
       if (window.applicationCache.status === 2) {
         localStorage.is755BCached = true;
@@ -130,16 +130,16 @@
     }
     */
 
-    // Local progress bar simulation
-    function frame1() {
-      let width = 0;
+    /* Local progress bar simulation
+    /*function frame1() {
+     /* let width = 0;
       const elem = document.getElementById("myBar");
       const progressText = document.getElementById("progress");
 
       const id = setInterval(() => {
         if (width >= 100) {
           clearInterval(id);
-          progressText.innerHTML = "تم التحميل بنجاح!";
+          progressText.innerHTML = "Update Cache Successfully!!";
         } else {
           width++;
           elem.style.width = width + "%";
