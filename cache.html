@@ -88,7 +88,47 @@
   <footer>
    All rights reserved © Shika~Store
   </footer>
+  <!-- JavaScript -->
+  <script>
+    // NOTE: applicationCache تم إلغاءه من معظم المتصفحات
+    // ممكن تستخدم Service Worker بداله
+    /
+    if (window.applicationCache) {
+      if (window.applicationCache.status === 2) {
+        localStorage.is755BCached = true;
+      }
 
+      window.applicationCache.ondownloading = function () {
+        document.getElementById("progress").innerHTML = "Page Caching Started!!";
+        localStorage.is755BCached = false;
+      };
+
+      window.applicationCache.onprogress = function (a) {
+        const percent = Math.round(100 * (a.loaded / a.total));
+        document.getElementById("myBar").style.width = percent + "%";
+        document.getElementById("myBar").innerHTML = percent + "%";
+      };
+
+      window.applicationCache.oncached = function () {
+        document.getElementById("progress").innerHTML = "Page Cached Successfully!!";
+        localStorage.is755BCached = true;
+        setTimeout(() => location.reload(), 1500);
+      };
+
+      window.applicationCache.onupdateready = function () {
+        document.getElementById("progress").innerHTML = "Update Cache Successfully!!";
+        localStorage.is755BCached = true;
+        setTimeout(() => location.reload(), 1500);
+      };
+
+      window.applicationCache.onnoupdate = function () {
+        location.replace("index.html");
+      };
+
+      window.applicationCache.onerror = function () {
+        location.replace("index.html");
+      };
+    }
   <!-- JavaScript -->
   <script>
    /* function frame1() {
