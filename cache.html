@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest" lang="ar" dir="rtl">
-<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>Shika~Store</title>
   <style>
     body {
-  background-image: url("PS4.png");
-  background-position: center;
-  margin:auto;
-  font-family:sans-serif;
-  font-size:20px;
-  font-weight:lighter;
-  text-align:left;
-  color:#FFFFFF;
-  background-size:cover;
-  }
+      background-image: url("PS4.png");
+      background-position: center;
+      background-size: cover;
+      margin: auto;
+      font-family: sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
+      text-align: left;
+      color: #FFFFFF;
+    }
 
     h1 {
       margin-top: 30px;
+      text-align: center;
     }
 
     #msgs {
@@ -27,25 +27,25 @@
       margin-bottom: 455px;
     }
 
- #myProgress {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 600px;
-  height: 30px;
-  color: rgb(255, 255, 255);
-  border-radius: 100px;
-  border: solid 1px rgb(0, 150, 255);
-  box-shadow: 0px 0px 5px rgb(0, 150, 255);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.3); /* ← شفاف */
-}
-    
+    #myProgress {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 600px;
+      height: 30px;
+      color: rgb(255, 255, 255);
+      border-radius: 100px;
+      border: solid 1px rgb(0, 150, 255);
+      box-shadow: 0px 0px 5px rgb(0, 150, 255);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.3); /* شفاف */
+    }
+
     #myBar {
       width: 0%;
       min-width: 100px;
@@ -95,50 +95,8 @@
 
   <!-- JavaScript -->
   <script>
-    // NOTE: applicationCache تم إلغاءه من معظم المتصفحات
-    // ممكن تستخدم Service Worker بداله
-    /
-    if (window.applicationCache) {
-      if (window.applicationCache.status === 2) {
-        localStorage.is755BCached = true;
-      }
-
-      window.applicationCache.ondownloading = function () {
-        document.getElementById("progress").innerHTML = "Page Caching Started!!";
-        localStorage.is755BCached = false;
-      };
-
-      window.applicationCache.onprogress = function (a) {
-        const percent = Math.round(100 * (a.loaded / a.total));
-        document.getElementById("myBar").style.width = percent + "%";
-        document.getElementById("myBar").innerHTML = percent + "%";
-      };
-
-      window.applicationCache.oncached = function () {
-        document.getElementById("progress").innerHTML = "Page Cached Successfully!!";
-        localStorage.is755BCached = true;
-        setTimeout(() => location.reload(), 1500);
-      };
-
-      window.applicationCache.onupdateready = function () {
-        document.getElementById("progress").innerHTML = "Update Cache Successfully!!";
-        localStorage.is755BCached = true;
-        setTimeout(() => location.reload(), 1500);
-      };
-
-      window.applicationCache.onnoupdate = function () {
-        location.replace("index.html");
-      };
-
-      window.applicationCache.onerror = function () {
-        location.replace("index.html");
-      };
-    }
-    */
-
-    /* Local progress bar simulation
-    /*function frame1() {
-     /* let width = 0;
+    function frame1() {
+      let width = 0;
       const elem = document.getElementById("myBar");
       const progressText = document.getElementById("progress");
 
