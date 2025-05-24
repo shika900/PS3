@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest"><head>
+<script>history.replaceState(null,null,'index.html');</script>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -67,15 +68,15 @@
       padding: 10px;
     }
  </style>
-	<body>		
+  <body>		
   <script>
     if(window.applicationCache.status==2){localStorage.is755BCached=true;}
     window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is755BCached=false;};
     window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
     window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
     window.applicationCache.onupdateready=function(){document.getElementById("progress").innerHTML="Update Cache Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
-    window.applicationCache.onnoupdate=function(){window.location.replace("lndex.html");};
-    window.applicationCache.onerror=function(){window.location.replace("lndex.html");};
+    window.applicationCache.onnoupdate=function(){window.location.replace("index.html");};
+    window.applicationCache.onerror=function(){window.location.replace("index.html");};
     </script>
    <script>
   var width = 0;
@@ -92,7 +93,7 @@
   }
   }
   </script>	
-  <h1 id="progress" class="titlehead">!! Loading.. Please Wait</h1>
+  <h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1>
   <body onload="frame1()">
 
   <!-- Progress Bar -->
