@@ -71,27 +71,27 @@
   <script>
     if(window.applicationCache.status==2){localStorage.is755BCached=true;}
     window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is755BCached=false;};
-		window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-		window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
+    window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+    window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
     window.applicationCache.onupdateready=function(){document.getElementById("progress").innerHTML="Update Cache Successfully!!";localStorage.is755BCached=true;setTimeout(function(){window.location.reload("myBar"); }, 1500);};
     window.applicationCache.onnoupdate=function(){window.location.replace("lndex.html");};
     window.applicationCache.onerror=function(){window.location.replace("lndex.html");};
     </script>
-		<script>
-			var width = 0;
-			function frame1() {
-				var elem = document.getElementById("myBar");
-				var i=0;
-				var id = setInterval(fra, 10);
-				function fra(){
-				  if(i<10 && width<100){
-					  width++;
-					  elem.style.width = width + "%";
-					  elem.innerHTML = width  + "%";
-				  } i++;
-				}
-			}
-		</script>	
+   <script>
+  var width = 0;
+  function frame1() {
+  var elem = document.getElementById("myBar");
+  var i=0;
+  var id = setInterval(fra, 10);
+  function fra(){
+  if(i<10 && width<100){
+  width++;
+  elem.style.width = width + "%";
+  elem.innerHTML = width  + "%";
+  } i++;
+  }
+  }
+  </script>	
   <h1 id="progress" class="titlehead">!! Loading.. Please Wait</h1>
   <body onload="frame1()">
 
@@ -105,6 +105,6 @@
   <!-- Footer -->
   <footer>
  Shika~Store © All rights reserved
-  </footer>
+</footer>
 </body>
 </html>
