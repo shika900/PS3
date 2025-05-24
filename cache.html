@@ -66,28 +66,12 @@
       padding: 10px;
     }
   </style>
-</head>
-
-<body onload="frame1()">
-
-  <!-- Progress Bar -->
-  <div id="myProgress">
-    <div id="myBar">0%</div>
-  </div>
-
-  <!-- Status Message -->
-  <h1 id="progress" class="titlehead">!! Loading.. Please Wait</h1>
-  <hr><br>
-
-  <!-- Footer -->
-  <footer>
- Shika~Store © All rights reserved
-  </footer>
-  <!-- JavaScript -->
-  <script>
+    <!-- JavaScript -->
     // NOTE: applicationCache تم إلغاءه من معظم المتصفحات
     // ممكن تستخدم Service Worker بداله
-    /
+  </style>
+	<body>
+  <script>
     if (window.applicationCache) {
       if (window.applicationCache.status === 2) {
         localStorage.is755BCached = true;
@@ -124,6 +108,22 @@
         location.replace("index.html");
       };
     }
+   </script>
+   <!-- Status Message -->
+  <h1 id="progress" class="titlehead">!! Loading.. Please Wait</h1>
+  <hr><br>
   <script>
+</head>
+
+<body onload="frame1()">
+
+  <!-- Progress Bar -->
+  <div id="myProgress">
+  <div id="myBar">0%</div>
+  </div>
+  <!-- Footer -->
+  <footer>
+ Shika~Store © All rights reserved
+  </footer>
 </body>
 </html>
