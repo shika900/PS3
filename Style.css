@@ -1,0 +1,9 @@
+body {
+    background-image: url("ps3.png"); /* العودة إلى الصورة الأصلية png */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
+}
